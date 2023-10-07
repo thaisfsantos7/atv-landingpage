@@ -1,0 +1,213 @@
+/* PÁGINA PRINCIPAL  */
+*{ /* retirar a margem do site */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 20px;
+}
+
+.nav-items{
+    list-style: none;
+    display: flex; /* ordenar lista em fileira */
+}
+
+.nav-items>li{
+    padding-left: 20px;
+}
+
+.nav-items>li>a{
+    padding-left: 30px;
+    color: #202020;
+    text-decoration: none;
+}
+
+
+/* ESTILIZAÇÃO DO FORMULARIO*/
+body{
+    background-color: rgb(180, 174, 183); /* cor de fundo do formulario */
+  }
+  
+  .container{
+    /* caixa do nome */
+    display: flex; /* */
+    justify-content: center; /* caixa centralizada */
+    width: 100%; /* distancia da esquerda para o meio*/
+    margin-top: 100px; /* distancia de cima para o meio */
+  }
+  
+  .card{
+    background-color: #ffffff85; /* cor da caixa */
+    padding: 50px; /* tamanho da caixa */
+    border-radius: 4%; /* borda da caixa */
+    box-shadow: 3px 3px 1px 0px #00000070; /* borda da sombra */
+    width: 700px; /* tamanho da caixa da tela */
+  }
+  
+  h1{
+    /* texto tela de formulário */
+    text-align: center;
+    margin-bottom: 20px;
+    color: #602050;
+  }
+  
+  input{
+    /* cx de usuario e senha */
+    width: 100%;
+    padding: 3px;
+    display: inline-block;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all 0.3s ease-out; /* tempo da transição */
+    border-radius: 4px;
+  }
+  
+  .label-float{
+    /* texto usuário e senha */
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .label-float input:focus{
+    border-bottom: 2px solid #0e9000;
+  }
+  
+  .label-float label{
+    color: #900000; /* cor do texto us e senha enquanto estão na cx*/
+    /* pointer-event: none; */
+    position: absolute;
+    top: 0;
+    left: 5px;
+    margin-top: 17px;
+    transition: all 0.3s ease-out;
+  }
+  
+  .label-float input:focus + label,
+  .label-float input:valid + label{
+    font-size: 13px;
+    margin-top: 0;
+    color: #232723; /* cor do texto quando sobe */
+  }
+  
+  button {
+    background-color: #c0c0c0;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  button:hover{
+    background-color: #009035; /* cor da cx de envio qnd passado por cima*/
+    color: #fff;
+  }
+  
+  .justify-center{
+    display: flex;
+    justify-content: center; /* centralizar */
+  }
+
+  /* ESTILIZAÇÃO TABELA DE PREÇOS*/
+  main{
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .tabela-preco{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: min(1600px, 100%);
+    margin: auto;
+}
+
+.card-preco{
+  flex: 1;
+  min-width: 250px; /* tamanho do card em largura */
+  margin: 30px 10px;
+  background-color: #ceb7d3; /* cor de fundo do card */
+  text-align: center;  /* centralizar o assunto dentro do card */
+  cursor: pointer; /* deixar o card clicável */
+  overflow: hidden;
+  color: #2d2d2d;
+  transition: .3s linear;
+}
+
+.card-preco:hover .card-preco-header{ /* fundo da escrita do card mudar de cor ao ser selecionado */
+  box-shadow: 0 0 0 26cm #b39fcb;
+}
+
+.card-preco-header{
+  background-color: #fff;
+  display: inline-block;
+  color: #b39fcb;
+  padding: 12px;
+  border-radius: 0 0 20px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: .4s line;
+}
+
+
+
+.preco sup, preco span{
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.card-preco:hover, card-preco:hover{
+  color: #fff; 
+}
+
+.preco{
+  font-size: 22px;
+  color: #000000;
+  margin: 40px 0;
+  transition: .2 linear;
+}
+
+.card-preco p{
+  font-size: 16px;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+.btn{
+  display: inline-block;
+  margin-bottom: 40px;
+  margin-top: 80px;
+  border: 2px dolid red;
+  color: black;
+  padding: 18px 40px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: .3s linear;
+}
+
+.btn:hover{
+  background-color: rgb(206, 100, 194); /* cor da caixinha do botao */
+  color: black; /* cor da letra depois de selecionado */
+}
+
+/* responsividade */
+@media screen and (max-width:400px){
+  .body{
+    width: 100%;
+    padding: 0;
+  }
+}
